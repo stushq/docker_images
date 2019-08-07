@@ -33,6 +33,14 @@ spec:
 """
         }
     }
+    
+    options {
+        buildDiscarder(logRotator(artifactDaysToKeepStr: '', 
+                                  artifactNumToKeepStr: '', 
+                                  daysToKeepStr: '', 
+                                  numToKeepStr: '10'))
+    }
+    
     stages {
         stage('Build with Kaniko') {
             steps {
@@ -40,7 +48,7 @@ spec:
         container(name: 'kaniko', shell: '/busybox/sh') {
            withEnv(['PATH+EXTRA=/busybox']) {
             sh '''#!/busybox/sh
-            /kaniko/executor --context `pwd` -f alpine/java7/Dockerfile --destination stuartcbrown/alpine-java7:latest
+            /kaniko/executor --context `pwd` -f alpine/Dockerfile --destination stuartcbrown/alpine:latest
             '''
            }
         }
