@@ -1,7 +1,7 @@
 # based on alpine but with the following packages installed
 
-package
--------
+package |
+------- |
 bash|
 jq|
 wget|
