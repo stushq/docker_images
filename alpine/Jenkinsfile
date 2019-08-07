@@ -35,7 +35,10 @@ spec:
     }
     
     options {
-        buildDiscarder(logRotator(numToKeepStr: '1'))
+        buildDiscarder(logRotator(artifactDaysToKeepStr: '', 
+                                  artifactNumToKeepStr: '', 
+                                  daysToKeepStr: '', 
+                                  numToKeepStr: '10'))
     }
     
     stages {
