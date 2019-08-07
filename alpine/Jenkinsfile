@@ -40,7 +40,7 @@ spec:
         container(name: 'kaniko', shell: '/busybox/sh') {
            withEnv(['PATH+EXTRA=/busybox']) {
             sh '''#!/busybox/sh
-            /kaniko/executor --context `pwd` --destination stuartcbrown/alpine:latest
+            /kaniko/executor --context `pwd` -f alpine/Dockerfile --destination stuartcbrown/alpine:latest
             '''
            }
         }
