@@ -33,9 +33,7 @@ spec:
 """
         }
     }
-    properties(
-        [buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))]
-    )
+    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: ''))])
     stages {
         stage('Build with Kaniko') {
             steps {
