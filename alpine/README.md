@@ -6,4 +6,4 @@ bash |
 jq| |  
 wget | 
 
-note to run bash, as a entry poiint id defined you need to run 'docker run -it --entrypoint /bin/bash <image>'
+*note to run bash, if an entry poiint is defined you need to run 'docker run -it --entrypoint /bin/bash <image>'*
