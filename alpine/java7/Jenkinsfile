@@ -48,7 +48,7 @@ spec:
         container(name: 'kaniko', shell: '/busybox/sh') {
            withEnv(['PATH+EXTRA=/busybox']) {
             sh '''#!/busybox/sh
-            /kaniko/executor --context `pwd` -f alpine/java7/Dockerfile --destination stushq/alpine:latest
+            /kaniko/executor --context `pwd` -f alpine/java7/Dockerfile --destination stushq/alpine-java7:latest
             '''
            }
         }
