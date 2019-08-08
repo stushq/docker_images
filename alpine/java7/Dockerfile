@@ -1,4 +1,4 @@
-FROM stuartcbrown/alpine:latest
+FROM stushq/alpine:latest
 RUN echo $PATH
 RUN apk --update add openjdk7-jre
 RUN echo $PATH
